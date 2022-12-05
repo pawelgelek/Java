@@ -24,4 +24,6 @@ public class Zdom5 {
         System.out.println("Pierwiastek liczby "+a+" jest rowny: "+sqrt(a));
         return a;
     }
+
+    // commit przykład
 }
