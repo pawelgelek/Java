@@ -32,7 +32,8 @@ String rasa = "GermanShepard";
     @Override
     public String toString() {
         return "GermanShepard{" +
-                "rasa='" + rasa + '\'' +
+                ", rasa='" + rasa + '\'' +
+                ", rasa='" + rasa + '\'' +
                 ", kolor='" + kolor + '\'' +
                 ", wiek=" + wiek +
                 '}';
