@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Garage {
     public static void main(String[] args) {
-        Audi audi = utworzAudi("red", 2017, 52367);
+        var audi = utworzAudi("red", 2017, 52367);
         Skoda skoda = utworzSkoda("blue", 2018, 68716);
 
         ArrayList<Car> wszystkie = new ArrayList();
