@@ -7,7 +7,7 @@ public class Brudnopis {
         double b = getDouble(scanner, "Podaj druga liczbe");
         String podaneZKonsoli = getString(scanner);
         obliczenia(a, b, podaneZKonsoli);
-        wyswietlWynik();
+        wyswietlWynik(a,b,podaneZKonsoli);
     }
 
     private static void obliczenia(double a, double b, String podaneZKonsoli) {
@@ -18,11 +18,11 @@ public class Brudnopis {
             }
             case "pierwiastek": {
                 double p1 = Math.sqrt(a);
-                double p2 = Math.sqrt(b);
+                double p2=Math.sqrt(b);
                 break;
             }
             case "potegowanie": {
-                double p3 = Math.pow(a, b);
+                double p3= Math.pow(a, b);
                 break;
             }
         }
@@ -38,11 +38,10 @@ public class Brudnopis {
         System.out.println(komunikat);
         return scanner.nextDouble();
     }
-
-    private static String wyswietlWynik() {
-        System.out.println();
-        return;
-    }
+private static String wyswietlWynik(double a, double b, String obliczenia){
+    System.out.println(obliczenia);
+    return obliczenia;
+}
 
 }
 
