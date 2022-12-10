@@ -7,25 +7,27 @@ public class Brudnopis {
         double b = getDouble(scanner, "Podaj druga liczbe");
         String podaneZKonsoli = getString(scanner);
         obliczenia(a, b, podaneZKonsoli);
-        wyswietlWynik(a,b,podaneZKonsoli);
+        wyswietlWynik(obliczenia(a,b,podaneZKonsoli));
+//        System.out.println(obliczenia(a, b, podaneZKonsoli));
     }
 
-    private static void obliczenia(double a, double b, String podaneZKonsoli) {
+    private static double obliczenia(double a, double b, String podaneZKonsoli) {
         switch (podaneZKonsoli) {
             case "srednia": {
-                double s = a + b / 2;
-                break;
+                double s = (a + b) / 2;
+                return s;
             }
             case "pierwiastek": {
                 double p1 = Math.sqrt(a);
-                double p2=Math.sqrt(b);
-                break;
-            }
+                double p2 = Math.sqrt(b);
+                return p1;
+                            }
             case "potegowanie": {
-                double p3= Math.pow(a, b);
-                break;
+                double p3 = Math.pow(a, b);
+                return p3;
             }
         }
+        return obliczenia(a, b, podaneZKonsoli);
     }
 
     private static String getString(Scanner scanner) {
@@ -38,10 +40,11 @@ public class Brudnopis {
         System.out.println(komunikat);
         return scanner.nextDouble();
     }
-private static String wyswietlWynik(double a, double b, String obliczenia){
-    System.out.println(obliczenia);
-    return obliczenia;
-}
+
+    private static double wyswietlWynik(double x) {
+        System.out.println(x);
+        return x;
+    }
 
 }
 
