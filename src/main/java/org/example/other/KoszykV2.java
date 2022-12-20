@@ -5,29 +5,31 @@ import java.util.Scanner;
 public class KoszykV2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int ile = podajLiczbe("Podaj ilosc produktow w koszyku: ", scanner);
-        for (int i = 0; i <ile; i++)
-
-        System.out.println("Podaj nazwe produktu: ");
-
-//        String nextLine = scanner.nextLine();
-//        System.out.println("Podaj liczbe sztuk: ");
-//        double a = scanner.nextDouble();
-//        System.out.println("Podaj cene: ");
-//        double b = scanner.nextDouble();
+        double ile = podajLiczbe("Podaj ilosc produktow w koszyku: ", scanner);
+        double suma = 0;
+        for (int i = 0; i < ile; i++) {
+            String produkt = coKupujesz("Podaj nazwe produktu: ", scanner);
+            Double ilosc = podajLiczbe("Podaj liczbe sztuk: ", scanner);
+            Double cena = podajLiczbe("Podaj cene produktu: ", scanner);
+            suma = suma + (ilosc * cena);
+        }
+        System.out.println("suma zakupow: " + suma);
     }
 
-    public static int podajLiczbe(String komunikat, Scanner scanner) {
+    public static double podajLiczbe(String komunikat, Scanner scanner) {
         System.out.println(komunikat);
-        int a = scanner.nextInt();
+        double a = scanner.nextDouble();
         return a;
     }
 
-    public static Produkt utworzProdukt(String name, double quantity, double price) {
-        Produkt produkt = new Produkt();
-        produkt.name = name;
-        produkt.quantity = quantity;
-        produkt.price = price;
-        return produkt;
+    public static String coKupujesz(String komunikat, Scanner scanner) {
+        System.out.println(komunikat);
+        String a = scanner.next();
+        return a;
+    }
+
+    public static double sumaWydatkow(double ilosc, double cena) {
+        System.out.println("suma zakupow: " + ilosc * cena);
+        return cena;
     }
 }
