@@ -9,11 +9,11 @@ public class KoszykV2 {
         double suma = 0;
         for (int i = 0; i < ile; i++) {
             String produkt = coKupujesz("Podaj nazwe produktu: ", scanner);
-            Double ilosc = podajLiczbe("Podaj liczbe sztuk: ", scanner);
             Double cena = podajLiczbe("Podaj cene produktu: ", scanner);
+            Double ilosc = podajLiczbe("Podaj liczbe sztuk: ", scanner);
             suma = suma + (ilosc * cena);
         }
-        System.out.println("suma zakupow: " + suma);
+        sumaWydatkow(suma);
     }
 
     public static double podajLiczbe(String komunikat, Scanner scanner) {
@@ -28,8 +28,8 @@ public class KoszykV2 {
         return a;
     }
 
-    public static double sumaWydatkow(double ilosc, double cena) {
-        System.out.println("suma zakupow: " + ilosc * cena);
-        return cena;
+    public static Double sumaWydatkow(double suma) {
+        System.out.println("suma zakupow: " + suma);
+        return suma;
     }
 }
