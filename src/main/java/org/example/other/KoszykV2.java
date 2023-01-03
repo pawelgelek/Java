@@ -1,19 +1,34 @@
 package org.example.other;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+//Zadanie:
+//- utworz klase Koszyk
+//-- przedmiot + ilosc + cena za przedmiot
+//- wylicz sume koszyka
+//- ++ pobieraj przedmiot / ilosc / cene z konsoli
+
+//Porady:
+//- przekaż do metody Liste<Koszyk>
+//- w treści zadania było: "- utworz klase Koszyk -- przedmiot + ilosc + cena za przedmiot"
+//Ale nie masz nigdzie klasy Koszyk, która ma produkt, cene, ilosc.
 
 public class KoszykV2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double ile = podajLiczbe("Podaj ilosc produktow w koszyku: ", scanner);
+
+
         double suma = 0;
         for (int i = 0; i < ile; i++) {
-            String produkt = coKupujesz("Podaj nazwe produktu: ", scanner);
-            Double cena = podajLiczbe("Podaj cene produktu: ", scanner);
-            Double ilosc = podajLiczbe("Podaj liczbe sztuk: ", scanner);
-            suma = suma + (ilosc * cena);
+            ProduktV2 produktV2 = coKupujesz();
+            ArrayList<ProduktV2> wszystkie = new ArrayList<>();
+            wszystkie.add(produktV2);
+//            Double cena = podajLiczbe("Podaj cene produktu: ", scanner);
+//            Double ilosc = podajLiczbe("Podaj liczbe sztuk: ", scanner);
+//            suma = suma + (ilosc * cena);
         }
-        sumaWydatkow(suma);
+//        sumaWydatkow(suma);
     }
 
     public static double podajLiczbe(String komunikat, Scanner scanner) {
@@ -22,14 +37,16 @@ public class KoszykV2 {
         return a;
     }
 
-    public static String coKupujesz(String komunikat, Scanner scanner) {
-        System.out.println(komunikat);
-        String a = scanner.next();
-        return a;
+    public static ProduktV2 coKupujesz(String name, double price, double quantity) {
+        ProduktV2 produktV2 = new ProduktV2();
+        produktV2.name = name;
+        produktV2.price = price;
+        produktV2.quantity = quantity;
+        return produktV2;
     }
 
-    public static Double sumaWydatkow(double suma) {
-        System.out.println("suma zakupow: " + suma);
-        return suma;
-    }
+//    public static Double sumaWydatkow(double suma) {
+//        System.out.println("suma zakupow: " + suma);
+//        return suma;
+//    }
 }
