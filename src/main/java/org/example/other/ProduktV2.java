@@ -1,6 +1,6 @@
 package org.example.other;
 
-public class ProduktV2 extends Object {
+public class ProduktV2 {
     String name;
     double price;
     double quantity;

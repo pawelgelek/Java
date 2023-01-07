@@ -16,14 +16,16 @@ import java.util.Scanner;
 public class KoszykV2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        double ile = podajLiczbe("Podaj ilosc produktow w koszyku: ", scanner);
-
-
+        int ile = podajLiczbe("Podaj ilosc produktow w koszyku: ", scanner);
+        ProduktV2 produktV2 = coKupujesz();
+        ArrayList<ProduktV2> wszystkie = new ArrayList();
+        wszystkie.add(produktV2);
         double suma = 0;
         for (int i = 0; i < ile; i++) {
-            ProduktV2 produktV2 = coKupujesz();
-            ArrayList<ProduktV2> wszystkie = new ArrayList<>();
-            wszystkie.add(produktV2);
+            ProduktV2 produktV2 = wszystkie.get(i);
+            wypisz(produktV2,i);
+
+
 //            Double cena = podajLiczbe("Podaj cene produktu: ", scanner);
 //            Double ilosc = podajLiczbe("Podaj liczbe sztuk: ", scanner);
 //            suma = suma + (ilosc * cena);
@@ -31,9 +33,9 @@ public class KoszykV2 {
 //        sumaWydatkow(suma);
     }
 
-    public static double podajLiczbe(String komunikat, Scanner scanner) {
+    public static int podajLiczbe(String komunikat, Scanner scanner) {
         System.out.println(komunikat);
-        double a = scanner.nextDouble();
+        int a = scanner.nextInt();
         return a;
     }
 
