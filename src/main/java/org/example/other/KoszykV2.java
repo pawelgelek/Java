@@ -57,7 +57,7 @@ public class KoszykV2 {
 
     public static String podajNazwe(String komunikat, Scanner scanner) {
         System.out.println(komunikat);
-        String a = scanner.nextLine();
+        String a = scanner.next();
         return a;
     }
 
