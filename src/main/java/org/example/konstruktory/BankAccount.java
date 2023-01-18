@@ -38,7 +38,7 @@ class BankAccount {
         if (value >= 0) {
             this.value = value;
         } else {
-            System.out.println("Blad! Saldo konta nie moze byc ujemne!");
+            System.out.println("Blad! Bilans konta nie moze byc ujemny!");
         }
     }
 }

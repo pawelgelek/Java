@@ -9,7 +9,7 @@ public class BankApp {
 //        BankAccount bankAccount = new BankAccount("Andrzej", "123", -110);
         bankAccount.setOwner("Andrzej");
         bankAccount.setNumber("123");
-        bankAccount.setValue(-200);
+        bankAccount.setValue(-300);
 //        System.out.println(bankAccount);
         System.out.println("Nazwa uzytkownika: " + bankAccount.getOwner());
         System.out.println("Numer rachunku bankowego: " + bankAccount.getNumber());
