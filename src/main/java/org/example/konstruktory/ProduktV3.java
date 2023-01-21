@@ -1,24 +1,20 @@
-package org.example.other;
+package org.example.konstruktory;
 
-public class ProduktV2 {
+public class ProduktV3 {
     String name;
     double price;
     double quantity;
 
-    public ProduktV2(String name, double price, double quantity) {
+    public ProduktV3(){
+
+    }
+    public ProduktV3(String name, double price, double quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
 
-    @Override
-    public String toString() {
-        return "ProduktV2{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", quantity=" + quantity +
-                '}';
-    }
+
 
     public void setName(String name) {
         this.name = name;
@@ -32,7 +28,7 @@ public class ProduktV2 {
         if (price > 0) {
             this.price = price;
         } else {
-            System.out.println("Uwaga! Cena musi byc wieksza niz 0!");
+            System.out.println("Uwaga! Cena musi byc wieksza niz 0! ");
         }
     }
 
@@ -44,11 +40,10 @@ public class ProduktV2 {
         if (quantity > 0) {
             this.quantity = quantity;
         } else {
-            System.out.println("Uwaga! Ilosc produktu musi byc wieksza niz 0!");
+            System.out.println("Uwaga! Ilosc musi byc wieksza niz 0! ");
         }
     }
-
-    public Double getQuantity() {
-        return quantity;
+        public Double getQuantity () {
+            return quantity;
+        }
     }
-}
