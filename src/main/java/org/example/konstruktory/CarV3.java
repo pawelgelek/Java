@@ -4,6 +4,14 @@ public class CarV3 {
     String name;
     String color;
 
+    @Override
+    public String toString() {
+        return "CarV3{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                '}';
+    }
+
     public CarV3(String name, String color) {
         this.name = name;
         this.color = color;
