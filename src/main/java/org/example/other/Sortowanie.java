@@ -8,15 +8,15 @@ public class Sortowanie {
     public static void main(String[] args) {
         ArrayList<Integer> numbers = new ArrayList<>();
         ThreadLocalRandom random = ThreadLocalRandom.current();
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 5; i++) {
             int number = random.nextInt(10000);
             numbers.add(number);
         }
         System.out.println("Nieposortowane: " + numbers);
-        Collections.sort(numbers);
-        System.out.println("Posortowane rosnaco: " + numbers);
         Collections.reverse(numbers);
         System.out.println("Posortowane malejaco: " + numbers);
+        Collections.sort(numbers);
+        System.out.println("Posortowane rosnaco: " + numbers);
     }
 }
 //        int number1 = random.nextInt(10000);
