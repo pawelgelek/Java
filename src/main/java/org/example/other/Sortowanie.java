@@ -13,7 +13,7 @@ public class Sortowanie {
             numbers.add(number);
         }
         System.out.println("Nieposortowane: " + numbers);
-        Collections.reverse(numbers);
+        Collections.sort(numbers,Collections.reverseOrder());
         System.out.println("Posortowane malejaco: " + numbers);
         Collections.sort(numbers);
         System.out.println("Posortowane rosnaco: " + numbers);
