@@ -28,6 +28,29 @@ class FizzBuzzTest {
         String wynik = FizzBuzz.fizzBuzz(15);
         Assertions.assertEquals("FizzBuzz", wynik);
     }
+
+    @Test
+    void dlaLiczbyPierwszej() {
+        String wynik = FizzBuzz.fizzBuzz(7);
+        Assertions.assertEquals("7", wynik);
+    }
+
+    @Test
+    void dlaZera() {
+        String wynik = FizzBuzz.fizzBuzz(0);
+        Assertions.assertEquals("0", wynik); //tu cos nie dziala, w wyniku spodziewa sie "0" a jest "FizzBuzz"
+    }
+
+    @Test
+    void dlaDziwnychWartosci() {
+        Assertions.assertThrows(NullPointerException.class, () -> FizzBuzz.fizzBuzz(null));
+    }
+
+    @Test
+    void dlaLiczbyUjemnej() {
+        String wynik = FizzBuzz.fizzBuzz(-3);
+        Assertions.assertEquals("Fizz", wynik);
+    }
 }
 //    void czyMozenieDziala() {
 //        Calculator calculator = new Calculator();
