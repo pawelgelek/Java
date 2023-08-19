@@ -2,6 +2,7 @@ package org.example.other;
 //String Manipulation and Parsing: Tasks involving string manipulation, parsing, and regular expressions are common.
 // Candidates might be asked to reverse a string, check for palindrome, tokenize a string, or perform other string-related operations.
 
+//https://4programmers.net/Forum/Java/299498-porownanie_dla_wartosci_string_palindromy
 import java.util.Scanner;
 
 public class Palindrome {
