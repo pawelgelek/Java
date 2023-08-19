@@ -8,11 +8,12 @@ public class Palindrome {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String word1 = getString("Podaj wyraz, ktory bedziemy sprawdzac: ", scanner);
-        if(isPalindrome(word1)){
-            System.out.println("Tak, wyraz "+word1+" jest palindromem.");
-        } else {
-            System.out.println("Nie, wyraz "+word1+" nie jest palindromem");
-        }
+        resultPrinting(word1);
+//        if (isPalindrome(word1)) {
+//            System.out.println("Tak, wyraz " + word1 + " jest palindromem.");
+//        } else {
+//            System.out.println("Nie, wyraz " + word1 + " nie jest palindromem");
+//        }
     }
 
     public static String getString(String message, Scanner scanner) {
@@ -30,8 +31,16 @@ public class Palindrome {
             }
         }
         return word1.equals(stringBuilder.reverse().toString());
-
     }
 
+    public static void resultPrinting(String word1) {
+        if (isPalindrome(word1)) {
+            System.out.println("Tak, wyraz " + word1 + " jest palindromem.");
+        } else {
+            System.out.println("Nie, wyraz " + word1 + " nie jest palindromem");
+        }
+    }
 }
+
+
 
