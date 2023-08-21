@@ -19,8 +19,8 @@ public class Palindrome {
 
     public static String getString(String message, Scanner scanner) {
         System.out.println(message);
-        String a = scanner.nextLine();
-        return a;
+        String userInput = scanner.nextLine();
+        return userInput;
     }
 
     public static boolean isPalindrome(String word1) {
