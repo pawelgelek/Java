@@ -23,15 +23,15 @@ public class Palindrome {
         return userInput;
     }
 
-    public static boolean isPalindrome(String word1) {
+    public static boolean isPalindrome(String input) {
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < word1.length(); i++) {
-            char c = word1.charAt(i);
-            if (Character.isDigit(c) || Character.isAlphabetic(c)) {
-                stringBuilder.append(c);
+        for (int i = 0; i < input.length(); i++) {
+            char character = input.charAt(i);
+            if (Character.isDigit(character) || Character.isAlphabetic(character)) {
+                stringBuilder.append(character);
             }
         }
-        return word1.equals(stringBuilder.reverse().toString());
+        return input.equalsIgnoreCase(stringBuilder.reverse().toString());
     }
 
     public static void resultPrinting(String word1) {
